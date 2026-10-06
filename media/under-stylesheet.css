@@ -1,0 +1,135 @@
+/* Fagsidene (bygger på hoved-stylesheet.css) */
+.navigator
+{
+    padding-bottom: 72px;
+}
+
+/* Toppfelt med fagnavn og ingress */
+.overskrift,
+#startinfo
+{
+    padding-left: max(24px, calc((100% - 1072px) / 2));
+    padding-right: max(24px, calc((100% - 1072px) / 2));
+    background-color: var(--primar-lys);
+}
+
+.overskrift
+{
+    padding-top: 56px;
+}
+
+.overskrift h1
+{
+    font-size: clamp(32px, 5vw, 44px);
+    color: var(--tekst);
+}
+
+#startinfo
+{
+    padding-top: 16px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--kant);
+}
+
+#startinfo p
+{
+    max-width: 760px;
+    margin: 0;
+    font-size: 18px;
+    color: var(--tekst-dempet);
+}
+
+/* Innholdskort */
+.to-rader
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1120px;
+    margin: 40px auto 0 auto;
+    padding: 0 24px;
+}
+
+#innhold,
+#argumentasjon,
+#veienvidere
+{
+    padding: 28px 32px;
+    background-color: var(--hvit);
+    border: 1px solid var(--kant);
+    border-radius: var(--radius);
+}
+
+#veienvidere
+{
+    width: calc(100% - 48px);
+    max-width: 1072px;
+    margin: 24px auto 0 auto;
+    border-left: 4px solid var(--primar);
+}
+
+h2
+{
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--tekst);
+}
+
+h3
+{
+    margin: 24px 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--tekst);
+}
+
+#innhold p,
+#argumentasjon p,
+#veienvidere p
+{
+    margin: 0 0 12px 0;
+    color: var(--tekst-dempet);
+}
+
+ul
+{
+    margin: 0 0 12px 0;
+    padding: 0;
+    list-style: none;
+}
+
+li
+{
+    position: relative;
+    margin: 8px 0;
+    padding-left: 22px;
+}
+
+li::before
+{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primar);
+}
+
+@media (max-width: 800px)
+{
+    .to-rader
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #innhold,
+    #argumentasjon,
+    #veienvidere
+    {
+        padding: 24px 20px;
+    }
+}
